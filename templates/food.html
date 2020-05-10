@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+<body background="{% static "images/Village6.jpg" %}">
+{% load static %}
+<fieldset style="background: white">
+    <h4><img src="{% static "images/images2.png" %}" style="float: left"></h4>
+    <h4><img src="{% static "images/download2.jpg" %}" style="float: right"></h4>
+</fieldset>
+{% for i in qr %}
+    <table border="1" >
+    <tr><td><a href="/foodidno{{ i.name }}/"><img src="{{ i.foodname.url }}" style="width: 300px;height: 300px" ></a></td></tr>
+    </table>
+{% endfor %}
+</body>
+</html>
